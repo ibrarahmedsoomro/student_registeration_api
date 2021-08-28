@@ -3,6 +3,7 @@ const app = express();
 const port = process.env.Port || 3000;
 require('./db/conn');
 const Student = require("./models/students")
+
 app.use(express.json());
 
 app.get("/", (req, res)=>{

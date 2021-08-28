@@ -11,7 +11,7 @@ const studentSchema = new mongoose.Schema({
     email : {
         type : String,
         required : true,
-        unique : [true , "Email is Already Presente"],
+        unique : [false , "Email is Already Presented"],
         validate(value) {
             if(!validator.isEmail(value)) {
                 throw new error("Invalid Email")
